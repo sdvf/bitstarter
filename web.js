@@ -3,7 +3,7 @@ var app = express();
 app.use(express.logger());
 var fs = require('fs');
 
-app.get('/', function(request, response) {a
+app.get('/', function(request, response) {
   var fs = require('fs');
   var array = fs.readFileSync('file.txt').toString().split("\n");
   for(i in array) {
