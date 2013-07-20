@@ -5,10 +5,9 @@ var fs = require('fs');
 
 app.get('/', function(request, response) {
   var fs = require('fs');
-  var array = fs.readFileSync('./index.html').toString().split("\n");
-  for(i in array) {
-    response.send(array[i]);
-  }  
+  var input = fs.readFileSync('./index.html').toString();
+  console.log(input);
+  response.send(input);    
 });
 
 
