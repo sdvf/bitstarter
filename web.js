@@ -3,12 +3,12 @@ var app = express();
 app.use(express.logger());
 var fs = require('fs');
 
-app.get('/', function(request, response) {
-  fs.readFile('./index.html', function read(err, data) {
-    if (err) {
-        throw err;
-    }
-    response.send(data);
+app.get('/', function(request, response) {a
+  var fs = require('fs');
+  var array = fs.readFileSync('file.txt').toString().split("\n");
+  for(i in array) {
+    response.send(array[i]);
+  }  
 });
 
 
